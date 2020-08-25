@@ -8,7 +8,7 @@ services:
         hostname: mongodb_exporter
         networks:
           mongodb_exporter:
-        image: registry.cn-hangzhou.aliyuncs.com/trsrd/mongodb_exporter:prometheus 
+        image: registry.cn-hangzhou.aliyuncs.com/yangyuanpeng/mongodb_exporter:prometheus
         restart: on-failure
         environment:
           - TZ= Asia/Shanghai
