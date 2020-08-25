@@ -1,0 +1,21 @@
+version : '3.7'
+networks:
+  mongodb_exporter:
+    external: true
+services:
+  mongodb_exporter:
+        container_name : mongodb_exporter
+        hostname: mongodb_exporter
+        networks:
+          mongodb_exporter:
+        image: registry.cn-hangzhou.aliyuncs.com/trsrd/mongodb_exporter:prometheus 
+        restart: on-failure
+        environment:
+          - TZ= Asia/Shanghai
+          - mongodb_exporter_IP=192.168.200.118 #mongpodb ip
+          - mongodb_port=27017   #mongodb port
+        volumes:
+          - /etc/localtime:/etc/localtime:ro
+        ports :
+          - 9104:9001
+
