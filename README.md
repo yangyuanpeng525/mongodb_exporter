@@ -9,7 +9,11 @@
 #docker
 >
 #docker build -t mongodb_exporter:prometheus .
->#也可以直接导入mongodb_exporter.tar
->#docker-compose up -d 
->#docker-compose ps
->#访问curl http://localhost:9104
+>
+#也可以直接导入mongodb_exporter.tar
+>
+#docker-compose up -d 
+>
+#docker-compose ps
+>
+#访问curl http://localhost:9104
